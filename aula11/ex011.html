@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+            background-color: lightcoral;
+        }
+
+        div {
+            background-color: white;
+            height: 100px;
+            width: 300px;
+            padding: 50px;
+        }
+        #pais {
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.438);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Verificador de Nacionalidade</h1>
+    <div id="nac">
+        <label for="pais">Você nasceu em qual País? </label> 
+        <input type="text" name="pais" id="pais" placeholder="País">
+        <input type="button" value="Consultar" onclick="verificar()">
+
+    </div>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+            var con = window.document.getElementById ('pais')
+            var res = window.document.getElementById('res')
+            var p = (con.value)
+            if (p = 'Brasil') {
+                res.innerHTML = `<p>Você nasceu no ${p}, Você é um <strong>BRASILEIRO</strong> Safado!</p>`
+            } else {
+                res.innerHTML = `<p> Você nasceu no ${p}, Você é <strong>GRINGO</strong></p>`
+
+            }
+       
+
+          
+        }
+    </script>
+    
+</body>
+</html>
