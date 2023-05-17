@@ -49,7 +49,7 @@ function finalizar(){
         let maior = valores [0]
         let menor = valores [0]
         let soma =0
-        let medi =0
+        let media =0
         for(let pos in valores){
             soma += valores[pos]
             if(valores[pos] > maior) {
